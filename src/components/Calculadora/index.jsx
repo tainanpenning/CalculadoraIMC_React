@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./Calculadora.module.css"
+import style from "./Calculadora.module.css"
 
 const Calculadora = ({ setResultado }) => {
     const [inputPeso, setInputPeso] = useState("")
@@ -23,10 +23,10 @@ const Calculadora = ({ setResultado }) => {
 
     return (
         <div className="container">
-            <h1>Calculadora de IMC</h1>
-            <input type="number" placeholder="Digite sua altura" value={inputAltura} onChange={(e) => setInputAltura(e.target.value)} />
-            <input type="number" placeholder="Digite seu peso" value={inputPeso} onChange={(e) => setInputPeso(e.target.value)} />
-            <button type="button" onClick={botaoCalcular} >Calcular</button>
+            <h1 className={style.h1}>Calculadora de IMC</h1>
+            <input className={style.input} type="number" placeholder="Digite sua altura" value={inputAltura} onChange={(e) => setInputAltura(e.target.value)} />
+            <input className={style.input} type="number" placeholder="Digite seu peso" value={inputPeso} onChange={(e) => setInputPeso(e.target.value)} />
+            <button className={style.button} type="button" onClick={botaoCalcular} >Calcular</button>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-table{
+.table{
     background-color: var(--corPrincipal);
     max-width: 460px;
     width: 100%;
@@ -6,7 +6,7 @@ table{
     border-radius: 10px;
 }
 
-thead{
+.thead{
     display: block;
     justify-items: center;
     padding: 16px;
@@ -14,20 +14,20 @@ thead{
     border-bottom: 2px solid var(--corSecundaria);
 }
 
-tbody{
+.tbody{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-td{
+.td{
     font-size: 18px;
     padding: 4px;
     border-bottom: 2px solid var(--corSecundaria);
 }
 
 
-tr{
+.tr{
     display: flex;
     justify-content: space-between;
     padding: 12px;

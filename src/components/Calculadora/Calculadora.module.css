@@ -1,0 +1,26 @@
+h1{
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    margin: 20px;
+}
+
+input{
+    padding: 6px;
+    margin: 80px 10px;
+    border-radius: 6px;
+    max-width: 130px;
+}
+
+button{
+    align-self: center;
+    padding: 6px;
+    margin-right: 10px;
+    border-radius: 6px;
+    background-color: var(--corPrincipal);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--corHover);
+}

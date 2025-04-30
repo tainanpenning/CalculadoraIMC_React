@@ -1,9 +1,20 @@
 import { useState } from "react"
 import style from "./Calculadora.module.css"
 
-const Calculadora = ({ setResultado }) => {
+const Calculadora = ({ setResultado, setClassificacao }) => {
     const [inputPeso, setInputPeso] = useState("")
     const [inputAltura, setInputAltura] = useState("")
+
+    const classificarIMC = (imc) => {
+        if (imc < 16) return "Magreza grave"
+        if (imc >= 16 && imc < 16.9) return "Magreza moderada"
+        if (imc >= 17 && imc < 18.5) return "Magreza leve"
+        if (imc >= 18.6 && imc < 24.9) return "Peso ideal"
+        if (imc >= 25 && imc < 29.9) return "Sobrepeso"
+        if (imc >= 30 && imc < 34.9) return "Obesidade grau I"
+        if (imc >= 35 && imc < 39.9) return "Obesidade grau II"
+        return "Obesidade grau III"
+    }
 
     const botaoCalcular = () => {
         const peso = parseFloat(inputPeso)
@@ -19,6 +30,7 @@ const Calculadora = ({ setResultado }) => {
 
         const imc = peso / (altura * altura)
         setResultado(imc.toFixed(1));
+        setClassificacao(classificarIMC(imc))
     }
 
     return (

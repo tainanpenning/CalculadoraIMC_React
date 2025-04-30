@@ -1,3 +1,16 @@
+.resultado{
+    display: flex;
+    justify-content: center;
+    background-color: var(--corPrincipal);
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
 .table{
     background-color: var(--corPrincipal);
     max-width: 460px;
@@ -9,7 +22,7 @@
 .thead{
     display: block;
     justify-items: center;
-    padding: 16px;
+    padding: 8px;
     font-size: 22px;
     border-bottom: 2px solid var(--corSecundaria);
 }
@@ -22,7 +35,6 @@
 
 .td{
     font-size: 18px;
-    padding: 4px;
     border-bottom: 2px solid var(--corSecundaria);
 }
 
@@ -30,5 +42,5 @@
 .tr{
     display: flex;
     justify-content: space-between;
-    padding: 12px;
+    padding: 8px;
 }

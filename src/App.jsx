@@ -4,11 +4,12 @@ import Tabela from "./components/Tabela"
 
 function App() {
   const [resultado, setResultado] = useState("")
+  const [classificacao, setClassificacao] = useState("")
 
   return (
     <>
-      <Calculadora setResultado={setResultado} />
-      <Tabela resultado={resultado} />
+      <Calculadora setResultado={setResultado} setClassificacao={setClassificacao} />
+      <Tabela resultado={resultado} classificacao={classificacao}/>
     </>
   )
 }
